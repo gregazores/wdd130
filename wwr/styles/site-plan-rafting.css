@@ -168,5 +168,5 @@ nav a:hover {
 }
 
 header > h1, header > h2 {
-  color: #37392E;
+  color: #37392E !important;
 }
