@@ -167,6 +167,6 @@ nav a:hover {
   color: #F1FAEE;
 }
 
-header > h1, header > h2 {
-  color: #37392E !important;
+#site_plan_title, header > h1, header > h2 {
+  color: #37392E;
 }
