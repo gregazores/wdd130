@@ -1,8 +1,26 @@
+/* *****IMPORTS***** */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 /* *****UNIVERSAL STYLING***** */
+body {
+    font-size: 22px;
+    background-color: #fcfbfb; 
+    margin: 0;
+    padding: 0;
+}
 
+* {
+    font-family: 'Raleway', Tahoma, sans-serif;
+}
 
+ h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', Verdana, sans-serif;
+}
 
-/* *****POSITION STYLING***** */
+h2 {
+    margin: 0;
+}
 
 /* 9 Centering Page */
 #content {
@@ -10,33 +28,95 @@
     margin: 0 auto;
     color: #37392E;
 }
-/* 10 More Centering */
-nav a, #hero-msg h1, #hero-msg h4, .button-box, main section{
-    text-align: center;
-}
 
-/* *****MISC STYLING***** */
-
+/* *****ELEMENT STYLING (ORDERED ACCORDING TO APPEARANCE)***** */
 /* Adding a container for our message background */
+nav a {
+    text-decoration: none;
+    color: #F1FAEE;
+    text-align: center;
+    padding: 35px;
+}
+nav a:hover {
+    background-color: #E63946;
+}
+.home-title {
+    font-size: 2em;
+    margin-top: 10px;
+}
 #background {
     height: 725px;
     background-color:#A8DADC;
 }
-/* Take off or add the default underline of links */
-nav a, .book, .join, footer a {
-    text-decoration: none;
+.msg {
+    background-color: #F1FAEE;
+    line-height: 1.5em;
+    padding: 35px;
 }
-/* Add the text-decoration property with a value of underline to the following selectors: */
-footer h3 a:hover {
-    text-decoration: underline
+.msg p {
+    font-size: .8em;
+    padding-bottom: 15px;
+}
+.book, .join {
+    background-color: #E63946;
+    color: #F1FAEE;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+.book:hover, .join:hover {
+    background-color: #A8DADC;
 }
 
-/* *****COLORS STYLING***** */
+footer {
+    background-color:#A8DADC;
+    padding: 25px 50px;
+    margin-top: 200px;
+}
+
+
+
+/* *****SIZE STYLING***** */
+
+/* 14 Add a Few Widths */
+.logo {
+    width: 80px;
+}
+#logo_link {
+    padding-top: 5px;
+}
+#hero-img {
+    width: 100%;
+}
+main section{
+    text-align: center;
+}
+main section img {
+    box-sizing: border-box;
+}
+
+.rivers-card, .camping-card, .rapids-card {
+    margin: 200px 0;
+}
+.card-img {
+    /* try to put dropshadow later and get rid of colored border */
+    border: 10px solid #A8DADC;
+}
+.icon {
+    width: 80px;
+    color: #37392E;
+    padding-top: 10px;
+}
+footer .social img {
+    padding-top: 15px;
+}
+
+
+/* *****COLORS SPECIFIC STYLING***** */
 
 /* 12 Setting background colors */
-body {
-    background-color: #fcfbfb; 
-}
 header {
     background-color:#37392E;
 }
@@ -44,46 +124,26 @@ header {
     background-color: #F1FAEE; 
     padding: 20px;
 }
-nav a:hover {
-    background-color: #E63946;
-}
-.book, .join {
-    background-color: #E63946;
-}
-.book:hover, .join:hover {
-    background-color: #A8DADC;
-}
-.msg {
-    background-color: #F1FAEE;
-}
-footer {
-    background-color:#A8DADC;
-}
 
-
-/* *****WIDTH STYLING***** */
-
-/* 14 Add a Few Widths */
-.logo {
-    width: 80px;
-}
-#hero-img {
-    width: 100%;
-}
-.icon {
-    width: 80px;
+/* *****TYPOGRAPHY SPECIFIC STYLING***** */
+footer a {
     color: #37392E;
+    text-decoration: none;
 }
 
-/* *****TYPOGRAPHY STYLING***** */
-nav a {
-    color: #F1FAEE;
-}
-.button-box .book {
-    color: #F1FAEE;
-}
-footer h3, footer h3 a {
-    color: #37392E; 
+footer h3 a:hover {
+    text-decoration: underline
 }
 
-/* *****HEIRARCHY DEPENDED STYLING***** */
+/* *****POSITION STYLING***** */
+
+/* 10 More Centering */
+#hero-msg h1, #hero-msg h4, .button-box, main section{
+    text-align: center;
+}
+
+
+
+
+
+/* *****HEIRARCHY DEPENDENT STYLING***** */
