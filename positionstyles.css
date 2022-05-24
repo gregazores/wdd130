@@ -163,7 +163,6 @@
   /* This is the parent of the activity 6 boxes. */
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
   width: 600px;
   height: 600px;
 }
