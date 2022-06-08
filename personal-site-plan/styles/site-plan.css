@@ -5,22 +5,22 @@ Fonts are separated by a | */
 
 :root {
   /* change the values below to your colors from your palette */
-  --primary-color: #8D99AE   ;
-  --secondary-color: #EDF2F4 ;
+  --primary-color: #FFFFFF;
+  --secondary-color: #EDF2F4;
   --accent1-color: #EF233C;
-  --accent2-color: #2B2D42;
+  --accent2-color: #00BFF3;
 
   /* change the values below to your chosen font(s) */
   --heading-font: 'Playfair Display', serif;
   --paragraph-font: 'Open Sans', Helvetica, sans-serif;
 
   /* these colors below should be chosen from among your palette colors above */
-  --headline-color-on-white: #2B2D42;  /* headlines on a white background */ 
+  --headline-color-on-white: #303030;  /* headlines on a white background */ 
   --headline-color-on-color: #FFFFFF; /* headlines on a colored background */ 
-  --paragraph-color-on-white: #2B2D42; /* paragraph text on a white background */ 
-  --paragraph-color-on-color: #2B2D42; /* paragraph text on a colored background */ 
-  --paragraph-background-color: #EDF2F4  ;
-  --nav-link-color: #2B2D42;
+  --paragraph-color-on-white: #303030; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: #303030; /* paragraph text on a colored background */ 
+  --paragraph-background-color: #00BFF3;
+  --nav-link-color: #303030;
   --nav-background-color: #EDF2F4;
   --nav-hover-link-color: #FFFFFF;
   --nav-hover-background-color: #EF233C;
@@ -175,7 +175,7 @@ nav a:hover {
 }
 
 header > h1, header > h2 {
-  color: #2B2D42;
+  color: #303030;
 }
 
 .accent2 {
