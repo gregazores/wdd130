@@ -66,6 +66,7 @@ header > nav a:hover {
 }
 
 .bar-divider-left {
+    display: block;
     height: 2px;
     width: 80px;
     background-color: #00BFF3;
@@ -139,7 +140,6 @@ footer > .footer-wrapper > .footer-container {
 }
 
 .footer-nav > h3 > .bar-divider-left {
-    display: block;
     width: 0px;
     transition: width .6s;
 }
@@ -147,7 +147,6 @@ footer > .footer-wrapper > .footer-container {
 .footer-nav > h3:hover > .bar-divider-left {
     width: 50px;
 }
-
 
 .footer-nav > h3 > a {
     text-decoration: none;
@@ -288,22 +287,68 @@ footer > .footer-wrapper > .footer-container {
     margin-top: 50px;
     font-style: italic;
 }
-
+/* this is the card section start */
 .services-row.three-col-row {
     text-align: center;
     margin: 70px 0 200px 0;
 }
 
 .services-row > .card-container.home {
-    border-radius: 20px;
-    padding: 50px 40px;
-    box-shadow: 5px 5px 10px #3030304f;
-    transition: transform .5s;
+    background-color: transparent;
+    perspective: 1000px;
 }
 
-.services-row > .card-container.home:hover {
-    transform: scale(1.05);
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
+
+.services-row > .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+.flip-card-front, .flip-card-back {
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #3030304f;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    top: -100%;
+}
+
+.flip-card-front { 
+    background-color: #bbb;
+}
+
+.flip-card-front > .flip-card-front-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back > p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0 50px;
+}
+
+
 
 .services-row > .card-container.home > h3 {
     font-size: 1.2rem;
@@ -317,6 +362,21 @@ footer > .footer-wrapper > .footer-container {
     line-height: 30px;
 }
 
+/* this is the card section end */
 
 
+/*
+
+.services-row > .card-container.home {
+    border-radius: 20px;
+    padding: 50px 40px;
+    box-shadow: 5px 5px 10px #3030304f;
+    transition: transform .5s;
+}
+
+.services-row > .card-container.home:hover {
+    transform: scale(1.05);
+}
+
+*/
 
