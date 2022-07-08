@@ -67,7 +67,7 @@ header > nav a:hover {
 
 .bar-divider-left {
     height: 2px;
-    width: 100px;
+    width: 80px;
     background-color: #00BFF3;
     margin-left: 0;
     margin-right: auto;
@@ -102,7 +102,7 @@ footer {
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 40px 0;
+    padding: 80px 0;
 }
 
 footer > .footer-wrapper > .footer-container {
@@ -121,6 +121,7 @@ footer > .footer-wrapper > .footer-container {
 }
 
 .footer-work-links {
+    position: relative;
     grid-column: 2/3;
     text-align: right;
 }
@@ -130,29 +131,35 @@ footer > .footer-wrapper > .footer-container {
     font-weight: 400;
     margin-top: 0;;
     margin-bottom: 15px;  
-    transition: width 2s;
+    
+}
+
+.footer-nav > .bar-divider-left {
+    margin-bottom: 40px;
 }
 
 .footer-nav > h3 > .bar-divider-left {
+    display: block;
     width: 0px;
+    transition: width .6s;
 }
 
 .footer-nav > h3:hover > .bar-divider-left {
-    width: 60px;
+    width: 50px;
 }
+
 
 .footer-nav > h3 > a {
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 300;
-    display: inline-block;
     margin-bottom: 10px;
     letter-spacing: 5px;
 }
 
 .footer-work-links > a > img{
     width: 70px;
-    margin: 0 20px;
+    margin-left: 40px;
     opacity: 70%;
     border-radius: 15px;
     transition: transform .5s, opacity .6s;
@@ -161,6 +168,14 @@ footer > .footer-wrapper > .footer-container {
 .footer-work-links > a:hover > img {
     transform: scale(1.1);
     opacity: 100%;
+}
+
+.footer-work-links > p {
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 
@@ -283,6 +298,11 @@ footer > .footer-wrapper > .footer-container {
     border-radius: 20px;
     padding: 50px 40px;
     box-shadow: 5px 5px 10px #3030304f;
+    transition: transform .5s;
+}
+
+.services-row > .card-container.home:hover {
+    transform: scale(1.05);
 }
 
 .services-row > .card-container.home > h3 {
