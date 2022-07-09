@@ -40,13 +40,16 @@ header #logo-link h2 {
 }
 
 header > nav {
-    text-align: center;
-    margin: 30px 0;
-
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 40px auto 10px auto;
+    width: 70%;
+    
 }
 
 header > nav a {
-    margin: 0px 100px;
+    text-align: center;
+    display: inline-block;
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: 300;
@@ -54,9 +57,20 @@ header > nav a {
     letter-spacing: 5px;
 }
 
-header > nav a:hover {
-    border-bottom: 2px solid #00BFF3;
+header > nav > a > .nav-hover-line {
+    display: block;
+    margin: 5px auto;
+    height: 2px;
+    width: 60px;
+    opacity: 0%;
+    background-color: #00BFF3;
+    transition: opacity 1s linear .05s;
 }
+
+header > nav > a:hover > .nav-hover-line {
+    opacity: 100%;
+}
+
 
 .page-hero-container {
     background-color: #00BFF3;
