@@ -58,6 +58,70 @@ header > nav a:hover {
     border-bottom: 2px solid #00BFF3;
 }
 
+.page-hero-container {
+    background-color: #00BFF3;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.page-hero-msg {
+    background-color: rgba(0, 0, 0, 0.70);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.page-hero-msg h1, .page-hero-msg h2, .page-hero-msg p {
+    color: #ffff;
+    font-weight: 100;
+}
+
+.page-hero-msg h1 {
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+}
+
+.page-hero-msg h2 {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.page-hero-msg p {
+    font-size: 1.2rem;
+    width: 70%;
+    margin: 50px auto;
+    line-height: 30px;
+}
+
+.section-title-1 {
+    margin-top: 100px;
+}
+ 
+.section-title-1 > h2,   
+.section-title-1 > p{
+    color: #303030;
+    text-align: center;
+
+}
+
+.section-title-1 > h2 {
+    font-size: 2.3rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.section-title-1 > p {
+    width: 70%;
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin: 50px auto 0 auto;
+    font-style: italic;
+}
+
+
 .bar-divider-1 {
     height: 2px;
     width: 100px;
@@ -85,17 +149,32 @@ header > nav a:hover {
     grid-column-gap: 80px;
 }
 
-.card-col-1 {
+.three-col-row > .card-col-1 {
     grid-column: 1/2;
 }
 
-.card-col-2 {
+.three-col-row > .card-col-2 {
     grid-column: 2/3;
 }
 
-.card-col-3 {
+.three-col-row > .card-col-3 {
     grid-column: 3/4;
 }
+
+.two-col-row { 
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 80px;
+}
+
+.two-col-row > .card-col-1 {
+    grid-column: 2/3;
+}
+
+.two-col-row > .card-col-2 {
+    grid-column: 4/5;
+}
+
 
 footer {
     background-image: url("../images/pexels-oleksandr-tiupa-192136.jpg");
@@ -177,49 +256,14 @@ footer > .footer-wrapper > .footer-container {
     right: 0;
 }
 
-
-
-
 /* *****HOME PAGE STYLING***** */
 
 #home-hero {
     background-image: url("../images/pexels-denniz-futalan-942547.jpg");
-    background-color: #00BFF3;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-    padding: 100px 0;
 }
 
 #home-hero-msg {
-    background-color: rgba(0, 0, 0, 0.70);
-    width: 80%;
-    margin: 0 auto;
     padding: 50px 0 ;
-}
-
-#home-hero-msg > h1, #home-hero-msg > h2, #home-hero-msg > p {
-    color: #ffff;
-    font-weight: 100;
-}
-
-#home-hero-msg h1 {
-    font-size: 2.3rem;
-    margin-bottom: 15px;
-}
-
-#home-hero-msg h2 {
-    font-family: 'Open Sans', Helvetica, sans-serif;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-#home-hero-msg p {
-    font-size: 1.2rem;
-    width: 70%;
-    margin: 50px auto;
-    line-height: 30px;
 }
 
 
@@ -250,44 +294,23 @@ footer > .footer-wrapper > .footer-container {
 }
 
 .work-links .button-container .cv-button {
+    display: inline-block;
     text-decoration: none;
     background-color: #00bef394;
     padding: 10px 30px;
     border: 2px solid #00bef3;
     border-radius: 5px;
     color: #ffff;
-    transition: background-color .5s;
+    transition: background-color .5s, transform .5s;
 }
 
 .work-links > .button-container > .cv-button:hover {
     background-color: #00000000;
+    transform: scale(1.04) translateY(-3px);
     border: 2px solid #ffff;
 }
- 
-.home-services.services-section-wrapper > h2, 
-.home-services.services-section-wrapper > h3, 
-.home-services.services-section-wrapper > h4, 
-.home-services.services-section-wrapper > h5, 
-.home-services.services-section-wrapper > h6, 
-.home-services.services-section-wrapper > p{
-    color: #303030;
-    text-align: center;
 
-}
-
-.home-services.services-section-wrapper > h2 {
-    font-size: 2.3rem;
-    margin-top: 100px;
-    margin-bottom: 15px;
-}
-
-.home-services.services-section-wrapper > p {
-    font-size: 1.5rem;
-    font-weight: 100;
-    margin-top: 50px;
-    font-style: italic;
-}
-/* this is the card section start */
+/* this is the flip-card section start */
 .services-row.three-col-row {
     text-align: center;
     margin: 70px 0 200px 0;
@@ -325,7 +348,7 @@ footer > .footer-wrapper > .footer-container {
 }
 
 .flip-card-front { 
-    background-color: #bbb;
+    background-color: #ef233ba4;
 }
 
 .flip-card-front > .flip-card-front-content {
@@ -335,8 +358,7 @@ footer > .footer-wrapper > .footer-container {
 }
 
 .flip-card-back {
-    background-color: dodgerblue;
-    color: white;
+    background-color: #303030;
     transform: rotateY(180deg);
 }
 
@@ -348,21 +370,102 @@ footer > .footer-wrapper > .footer-container {
     padding: 0 50px;
 }
 
+.services-row > .card-container.home > .flip-card-inner img {
+    box-shadow: 5px 5px 10px #3030304f;
+}
 
-
-.services-row > .card-container.home > h3 {
+.services-row > .card-container.home > .flip-card-inner h3 {
+    color: #ffff;
     font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: 3px;
 }
 
-.services-row > .card-container.home > p {
+.services-row > .card-container.home > .flip-card-inner .flip-card-back p {
+    color: #ffff;
     font-size: 1.2rem;
     font-weight: 100;
     line-height: 30px;
 }
 
-/* this is the card section end */
+.skills-row {
+    text-align: center;
+}
+
+/* this is the flip-card section end */
+
+
+/* *****MY SKILLS PAGE STYLING***** */
+
+#skills-hero {
+    background-image: url("../images/pexels-lumn-167699.jpg");
+}
+
+#skills-hero-msg {
+    padding: 50px 0 ;
+}
+
+#skills-hero-msg h1 {
+    margin-top: 0px;
+}
+
+.skills-row {
+    margin: 80px 0;
+}
+
+.skills-row.three-col-row {
+    margin: 100px 0;
+}
+
+.skills-row.three-col-row > .card-container.skills, .skills-row.two-col-row > .card-container.skills  {
+    width: 216px;
+    margin: 0 auto;
+    transition: transform .5s;
+}
+
+.skills-row.three-col-row > .card-container.skills:hover, .skills-row.two-col-row > .card-container:hover {
+    transform: scale(1.1);
+}
+
+.skills-row.two-col-row > .card-container.skills > img, .skills-row.three-col-row > .card-container.skills > img {
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px #3030304f;
+}
+
+.skills-row.two-col-row > .card-container.skills > h3, .skills-row.three-col-row > .card-container.skills > h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.my-skills-download-cv {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.my-skills-download-cv > a {
+    display: inline-block;
+    box-shadow: 5px 5px 10px #3030304f;
+    text-decoration: none;
+    background-color: #303030;
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: #ffff;
+    transition: background-color .5s, transform .5s;
+}
+
+.my-skills-download-cv > a:hover {
+    background-color: #EF233C;
+    transform: scale(1.04) translateY(-3px);
+
+}
+
+
+
+
+
+
 
 
 /*
