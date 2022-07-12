@@ -71,7 +71,6 @@ header > nav > a:hover > .nav-hover-line {
     opacity: 100%;
 }
 
-
 .page-hero-container {
     background-color: #00BFF3;
     background-position: center;
@@ -108,6 +107,21 @@ header > nav > a:hover > .nav-hover-line {
     width: 70%;
     margin: 50px auto;
     line-height: 30px;
+}
+
+.hero-msg-wrapper {
+    padding: 50px 0 ;
+}
+
+.hero-msg-wrapper h1 {
+    margin-top: 0px;
+}
+
+.hero-msg-wrapper h2 {
+    margin-top: 50px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section-title-1 {
@@ -324,7 +338,7 @@ footer > .footer-wrapper > .footer-container {
     border: 2px solid #ffff;
 }
 
-/* this is the flip-card section start */
+/*this is the flip-card section start*/
 .services-row.three-col-row {
     text-align: center;
     margin: 70px 0 200px 0;
@@ -415,20 +429,6 @@ footer > .footer-wrapper > .footer-container {
     background-image: url("../images/pexels-sam-willis-1154619.jpg");
 }
 
-.skills-hero-msg-wrapper {
-    padding: 50px 0 ;
-}
-
-.skills-hero-msg-wrapper h1 {
-    margin-top: 0px;
-}
-
-.skills-hero-msg-wrapper h2 {
-    margin-top: 50px;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 .skills-row {
     margin: 80px 0;
@@ -479,10 +479,72 @@ footer > .footer-wrapper > .footer-container {
 .my-skills-download-cv > a:hover {
     background-color: #EF233C;
     transform: scale(1.04) translateY(-3px);
-
 }
 
 
+/* *****ABOUT ME PAGE STYLING***** */
+
+#about-hero {
+    background-image: url("../images/Depositphotos_57558765_Lcentr.jpg");
+}
+
+.hero-msg-wrapper.about-hero-msg-wrapper > h2 > span {
+    font-size: 30px;
+    font-weight: 100;
+    color: #fff;
+}
+
+.about-work-row.three-col-row {
+    margin: 100px 0;
+}
+
+.about-work-row.three-col-row > .about {
+    border-left: 1px solid #30303028;
+}
+
+.about-work-row.three-col-row > .about > .about-work-header {
+    border-left: 4px solid #EF233C;
+    padding: 5px 0;
+    margin-left: -1px;
+    transition: border .5s ease;
+}
+
+.about-work-row.three-col-row > .about:hover > .about-work-header {
+    border-left: 4px solid #00BFF3;
+}
+
+.about-work-row.three-col-row > .about > .about-work-header h3,
+.about-work-row.three-col-row > .about > img,
+.about-work-row.three-col-row > .about > .about-work-content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.about-work-row.three-col-row > .about > .about-work-header h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.about-work-row.three-col-row > .about > .about-work-content h4 {
+    display: none;
+}
+
+.about-work-row.three-col-row > .about > img {
+    display: block;
+    margin-top: 25px;
+}
+
+.about-work-row.three-col-row > .about > .about-work-content {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.about-work-row.three-col-row > .about > .about-work-content > p > em {
+    font-weight: 100;
+}
 
 
 
