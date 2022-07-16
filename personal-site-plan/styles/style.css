@@ -149,7 +149,6 @@ header > nav > a:hover > .nav-hover-line {
     font-style: italic;
 }
 
-
 .bar-divider-1 {
     height: 2px;
     width: 100px;
@@ -513,6 +512,7 @@ footer > .footer-wrapper > .footer-container {
     border-left: 4px solid #00BFF3;
 }
 
+
 .about-work-row.three-col-row > .about > .about-work-header h3,
 .about-work-row.three-col-row > .about > img,
 .about-work-row.three-col-row > .about > .about-work-content {
@@ -533,6 +533,14 @@ footer > .footer-wrapper > .footer-container {
 .about-work-row.three-col-row > .about > img {
     display: block;
     margin-top: 25px;
+    box-shadow: 5px 5px 10px #3030304f;
+    opacity: 70%;
+    transition: transform .5s, opacity .8s;
+}
+
+.about-work-row.three-col-row > .about:hover > img {
+    transform: scale(1.02);
+    opacity: 100%;
 }
 
 .about-work-row.three-col-row > .about > .about-work-content {
@@ -544,6 +552,78 @@ footer > .footer-wrapper > .footer-container {
 
 .about-work-row.three-col-row > .about > .about-work-content > p > em {
     font-weight: 100;
+}
+
+.education-row { 
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.education-row > .card-col-1 {
+    grid-column: 1/2;
+    text-align: right;
+    border-right: 6px solid #00BFF3;
+    margin-right: -3px;
+    padding-bottom: 80px;
+}
+
+.education-row > .card-col-2 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    border-left: 6px solid #00BFF3;
+    margin-left: -3px;
+    padding-bottom: 80px;
+}
+
+.education-row > .card-col-3 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    text-align: right;
+    border-right: 6px solid #00bef300;
+    margin-right: -3px;
+}
+
+.education-row > .card-container > img {
+    border-radius: 50%;
+    width: 150px;
+    box-shadow: 5px 5px 10px #3030304f;
+}
+
+.education-row > .card-container > .educ-content > h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-top: 0;
+}
+
+.education-row > .card-container > .educ-content > p {
+    color: #303030;
+    font-size: 1.2rem;
+    font-weight: 100;
+    line-height: 30px;
+    margin: 0;
+}
+
+.education-row > .card-col-1 > img,
+.education-row > .card-col-3 > img {
+    float: right;
+    margin-right: -78px;
+}
+
+.education-row > .card-col-2 > img {
+    float: left;
+    margin-left: -78px;
+}
+
+.education-row > .card-col-1 > .educ-content,
+.education-row > .card-col-3 > .educ-content {
+    margin-right: 100px;
+}
+
+.education-row > .card-col-2 > .educ-content {
+    margin-left: 100px;
 }
 
 
