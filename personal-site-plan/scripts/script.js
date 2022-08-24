@@ -1,19 +1,47 @@
-//animated profile carousel
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+//universal animation
+//header scroll animation
+function scrollFunction() {
+  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+    document.getElementById("site-main-header").classList.add("scrolled-header-style")
+    //document.getElementsByClassName("site-main-header").classList.add("scrolled-header-style")
+    //document.querySelector("header").classList.add("scrolled-header-style")
+    /*var nodeList = document.querySelectorAll("header.site-main-header");
+    for (let i = 0; i < nodeList.length; i++) {
+      nodeList[i].classList.add("scrolled-header-style")
+    }*/
+  } else {
+    document.getElementById("site-main-header").classList.remove("scrolled-header-style")
+    //document.getElementsByClassName("site-main-header").classList.add("scrolled-header-style")
+    //document.querySelector("header").classList.remove("scrolled-header-style")
+    /*var nodeList = document.querySelectorAll("header.site-main-header");
+    for (let i = 0; i < nodeList.length; i++) {
+      nodeList[i].classList.remove("scrolled-header-style")
+    }*/
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "inline-block";
-  setTimeout(showSlides, 4000); // Change image every 2 seconds
 }
 
+window.onscroll = function() {scrollFunction()};
+
+
+
+//animation for index.html
+if ((window.location.pathname == "/wdd130/personal-site-plan/index.html") || (window.location.pathname == "/personal-site-plan/index.html")) {
+  //or (window.location.pathname == '/personal-site-plan/index.html') for visual studio code local host to work
+  //animated profile carousel
+  let slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "inline-block";
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
+  }
 
 //typewriter effect
 var messageArray = "";
@@ -64,7 +92,14 @@ textSelector = () => {
     
 }
 
-window.addEventListener("load", textSelector);
+ window.addEventListener("load", textSelector);
+
+}
+
+
+
+
+
 
 
 //Perhaps you can add an else statement containing:  textPosition = 0;
