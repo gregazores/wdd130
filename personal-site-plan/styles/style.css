@@ -536,6 +536,71 @@ footer > .footer-wrapper > .footer-container {
     font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: 3px;
+    margin-top: 8px; 
+}
+
+/* resources for styling
+https://www.youtube.com/watch?v=0198ceyTVtg
+https://www.youtube.com/watch?v=IHQMOklyqXM
+*/
+
+.card-container.skills .progress-line {
+    margin-top: 40px;
+    position: relative;
+    height: 7px;
+    width: 100%;
+    background: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 10px #30303023;
+    display: none;
+
+}
+
+.card-container.skills:hover .progress-line {
+    display: block;
+    animation: fade_in_bar .8s linear;  
+}
+
+@keyframes fade_in_bar {
+    0%   {opacity: 0; }
+    25%  {opacity: .25;}
+    50%  {opacity: .50; }
+    75%  {opacity: .75;}
+    100% {opacity: 1;}
+  }
+
+.card-container.skills .progress-line > span {
+    height: 100%;
+    background: #00BFF3;
+    position: absolute;
+    left: 0;
+    border-radius: 10px;
+}
+
+.card-container.skills .progress-line > span::before {
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 0;
+    border: 8px solid transparent;
+    border-bottom-width:0px;
+    border-right-width: 0px;
+    border-top-color: #303030;
+    right: 0px;
+    top: -12px
+}
+
+.card-container.skills .progress-line > span::after {
+    position: absolute;
+    content: attr(data-skills-percent);
+    right: 0%;
+    top: -26px;
+    color: #fff;
+    font-size: .7rem;
+    background: #303030;
+    padding: 1px 8px;
+    border-radius: 3px;
+    letter-spacing: 1px;
 }
 
 .my-skills-download-cv {
@@ -709,6 +774,19 @@ footer > .footer-wrapper > .footer-container {
 
 
 
+/*
+.testing-div::before {
+    content: "";
+    height: 0px;
+    width: 0px;
+    border: 8px solid transparent;
+    border-bottom-width:0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+
+}
+
+*/
 
 
 

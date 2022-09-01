@@ -96,9 +96,33 @@ textSelector = () => {
 
 }
 
+//document.getElementById("test-tester").setAttribute('abc', '90%')
+
+function skillBarAnimation(x) {
+  
+  var counter = 0
+  var selector = "#" + x.getAttribute("id") + " .progress-line > span"
+  var span_element = document.querySelector(selector)
+  var skill_percent = +x.getAttribute("data-percent")
 
 
+  var updateCounter = () => {
+    if (counter < skill_percent) {
+      counter = counter + 1
+      span_element.setAttribute('data-skills-percent', counter + "%")
+      span_element.style.width = counter + "%";
+      setTimeout(updateCounter, 10)
+    } else {
+      counter = skill_percent
+      span_element.setAttribute('data-skills-percent', counter + "%")
+      span_element.style.width = counter + "%";
+    }
+  }
 
+  setTimeout(updateCounter, 200)
+
+  
+}
 
 
 
@@ -107,6 +131,29 @@ textSelector = () => {
 
 
 
+
+/*
+
+  var updateCounter = () => {
+    var skill_percent = +x.getAttribute("data-percent")
+    if (counter < skill_percent) {
+      counter = counter + 1
+      document.querySelector(selector).setAttribute('data-skills-percent', counter)
+      setTimeout(updateCounter, 500)
+    } else {
+      counter = skill_percent
+      document.querySelector(selector).setAttribute('data-skills-percent', counter)
+    }
+
+
+  }
+
+
+
+
+
+
+*/
 
 
 
