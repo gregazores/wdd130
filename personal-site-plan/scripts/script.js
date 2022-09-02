@@ -96,8 +96,6 @@ textSelector = () => {
 
 }
 
-//document.getElementById("test-tester").setAttribute('abc', '90%')
-
 function skillBarAnimation(x) {
   
   var counter = 0
@@ -106,12 +104,12 @@ function skillBarAnimation(x) {
   var skill_percent = +x.getAttribute("data-percent")
 
 
-  var updateCounter = () => {
+  var updateSkillLevel = () => {
     if (counter < skill_percent) {
       counter = counter + 1
       span_element.setAttribute('data-skills-percent', counter + "%")
       span_element.style.width = counter + "%";
-      setTimeout(updateCounter, 10)
+      setTimeout(updateSkillLevel, 10)
     } else {
       counter = skill_percent
       span_element.setAttribute('data-skills-percent', counter + "%")
@@ -119,7 +117,7 @@ function skillBarAnimation(x) {
     }
   }
 
-  setTimeout(updateCounter, 200)
+  setTimeout(updateSkillLevel, 200)
 
   
 }

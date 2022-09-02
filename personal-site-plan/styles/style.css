@@ -553,18 +553,17 @@ https://www.youtube.com/watch?v=IHQMOklyqXM
     border-radius: 10px;
     box-shadow: inset 5px 5px 10px #30303023;
     display: none;
-
 }
 
 .card-container.skills:hover .progress-line {
     display: block;
-    animation: fade_in_bar .8s linear;  
+    animation: fade_in_bar 1s linear; 
 }
 
 @keyframes fade_in_bar {
-    0%   {opacity: 0; }
+    0%   {opacity: 0;}
     25%  {opacity: .25;}
-    50%  {opacity: .50; }
+    50%  {opacity: .50;}
     75%  {opacity: .75;}
     100% {opacity: 1;}
   }
